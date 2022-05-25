@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/sass/styles.css">
+  
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo-box">
+      <img src="./images/logo.svg" alt="image of logo" class="header__logo-img">
+
+      <!-- can't find file for hamburger copied from tthe last project-->
+      <img src="./images/icon-hamburger.svg" alt="icon of hamburger" class="header__icon-hambuger">
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-link">Features</li>
+          <li class="header__nav-link">Pricing</li>
+          <li class="header__nav-link">Resources</li>
+
+          <div class="header__sign-in">
+            <li class="header__sign-in__link">Login</li>
+            <li class="header__sign-in__link btn">Sign Up</li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="info">
+      <div class="info__image-box">
+        <img src="./images/illustration-working.svg" alt="" class="info__image">
+      </div>
+
+      <div class="info__text">
+        <h1 class="info__text--heading">More than just <br> shorter links</h1>
+        <p class="info__text--para">
+          Build your brand’s recognition and get detailed insights
+          on how your links are performing.
+        </p>
+
+        <button class="btn info__btn">Get Started</button>
+      </div>
+    </section>
+
+    <section class="cta">
+      <form action="#" class="cta__form">
+        <input type="text" class="cta__input" placeholder="Shorten a link here...">
+        <button class="btn cta__btn">Shorten It!</button>
+      </form>
+
+      <!-- the shorten links probably go somewhere in here -->
+    </section>
+
+    <section class="details">
+      <div class="details__container">
+        <h3 class="details__heading">Advanced Statistics</h3>
+        <p class="details__para">
+          Track how your links are performing across the web with our
+          advanced statistics dashboard.
+        </p>
+
+        <div class="details__cards-container">
+          <div class="detail__card card--1">
+            <img src="./images/icon-brand-recognition.svg" alt="brand recognition icon" class="card__img">
+            <h4 class="card__heading">Brand Recognition</h4>
+            <p class="card__para">
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your content.
+            </p>
+          </div>
+
+          <div class="detail__card card--2">
+            <img src="./images/icon-detailed-records.svg" alt="detailed Records icon" class="card__img">
+            <h4 class="card__heading">Detailed Records</h4>
+            <p class="card__para">
+              Gain insights into who is clicking your links. Knowing when and where
+              people engage with your content helps inform better decisions.
+            </p>
+          </div>
+
+          <div class="detail__card card--3">
+            <img src="./images/icon-fully-customizable.svg" alt="fully customizable icon" class="card__img">
+            <h4 class="card__heading">Fully Customizable</h4>
+            <p class="card__para">
+              Improve brand awareness and content discoverability through customizable
+              links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="start">
+      <div class="start__container">
+        <h2 class="start__heading">Boost your links today</h2>
+        <button class="btn start__btn">Get Started</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <img src="./images/logo.svg" alt="image of logo" class="footer__logo">
+
+      <div class="links__container">
+        <div class="links__box box--1">
+          <h5 class="heading--sm">Features</h5>
+          <ul class="links__list">
+            <li class="links__footer">Link Shortening</li>
+            <li class="links__footer">Branded Links</li>
+            <li class="links__footer">Analytics</li>
+          </ul>
+        </div>
+
+        <div class="links__box box--2">
+          <h5 class="heading--sm">Resources</h5>
+          <ul class="links__list">
+            <li class="links__footer">Blog</li>
+            <li class="links__footer">Developers</li>
+            <li class="links__footer">Support</li>
+          </ul>
+        </div>
+
+        <div class="links__box box--3">
+          <h5 class="heading--sm">Company</h5>
+          <ul class="links__list">
+            <li class="links__footer">About</li>
+            <li class="links__footer">Our Team</li>
+            <li class="links__footer">Careers</li>
+            <li class="links__footer">Contact</li>
+          </ul>
+        </div>
+
+
+        <div class="footer__socials">
+          <img src="./images/icon-facebook.svg" alt="icon of facebook" class="footer__social-icon">
+          <img src="./images/icon-twitter.svg" alt="icon of twitter" class="footer__social-icon">
+          <img src="./images/icon-pinterest.svg" alt="icon of pinterest" class="footer__social-icon">
+          <img src="./images/icon-instagram.svg" alt="icon of instagram" class="footer__social-icon">
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  
+
+
+
+  
+
+  
+  
+  
+  
+  
+</body>
+</html>
