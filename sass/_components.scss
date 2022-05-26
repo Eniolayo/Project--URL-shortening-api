@@ -147,6 +147,7 @@
 
     @include respond(tab) {
         padding: 2rem 0;
+        background-image: url(../images/bg-boost-desktop.svg);
         
         &__form {
             display: flex;
@@ -186,6 +187,177 @@
 }
 
 .details {
-    margin-top: 3rem;
+    margin-top: 3.2rem;
+    background-color: rgba( $grayish-violet, .2);
+    padding: 2.5rem 0;
 
+    &__container {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    &__heading {
+        text-align: center;
+        font-family: $poppins;
+        font-size: 1.8rem;
+    }
+
+    &__para {
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 1.4rem;
+        color: $grayish-violet;
+        font-weight: 500;
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    &__cards-container {
+        width: 90%;
+        margin-inline: auto;
+    }
+    
+    &__card {
+        border-radius: 6px;
+        margin-top: 4.6rem;
+        background-color: white;
+        // box-shadow: 2px 2px 2px black;
+        text-align: center;
+        width: 90%;
+        margin-inline: auto;
+        padding: 2.5rem 1rem 1rem 1.5rem;
+    }
+
+
+    @include respond(tab) {
+        padding-bottom: 9.5rem;
+
+        &__cards-container {
+            display: flex;
+            gap: 2rem;
+        }
+
+        &__heading {
+            font-size: 2.2rem;
+        }
+
+        &__para {
+            width: 50%;
+            font-size: 1.7rem;
+        }
+
+        
+    }
+}
+
+
+.card {
+
+    &__img-box {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        padding: .8rem;
+        background-color: $violet--primary;
+        position: relative;
+        top: -66px;
+        left: 38%;
+    }
+
+    &__img {
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        left: 15px;
+        top: 14px;
+    }
+
+    &__heading {
+        font-family: $poppins;
+        font-weight: 700;
+        font-size: 1.2rem;
+        transform: translateY(-42px);
+    }
+    
+    &__para {
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 1.1rem;
+        color: $grayish-violet;
+        font-weight: 500;
+        width: 90%;
+        margin-inline: auto;
+        transform: translateY(-42px);
+    }
+
+    @include respond(tab) {
+        &__img-box {
+            left: 3%;
+        }
+
+        &__heading {
+            text-align: left;
+        }
+
+
+        &__para {
+            text-align: left;
+            width: 100%;
+        }
+
+
+        &--2 {
+            transform: translateY(35px);
+        }
+        &--3 {
+            transform: translateY(65px);
+        }
+    }
+}
+
+
+//the pseduo element is not responsive
+// .after-box {
+
+//     &::after {
+//         content: '';
+//         width: .4rem;
+//         height: 2.8rem;
+//         background-color: $cyan;
+//         position: absolute;
+//         top: 283px;
+//         left: 26px;
+//     }
+// }
+
+.start {
+    margin-top: 3.8rem;
+    background-image: url(../images/bg-boost-desktop.svg);
+    background-size: cover;
+    background-color: $violet--primary;
+    padding: 2.5rem 0;
+
+    &__heading {
+        font-family: $poppins;
+        font-size: 1.8rem;
+        color: white;
+        text-align: center;
+    }
+
+    &__btn {
+        display: block;
+        margin-inline: auto;
+        margin-top: .8rem;
+        padding: .7rem 2.8rem;
+        font-family: $poppins;
+        color: white;
+        background-color: $cyan;
+        border: none;
+        border-radius: 100px;
+        font-weight: 700;
+    }
+
+    @include respond(tab) {
+        background-image: url(../images/bg-boost-desktop.svg);
+    }
 }
