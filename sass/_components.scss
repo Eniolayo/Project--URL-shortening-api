@@ -1,0 +1,188 @@
+@use '../sass/base' as *;
+
+.info {
+    margin-top: 1.8rem;
+
+    &__image-box {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    &__image {
+        //how did they make the image like that??
+        // width: 80%;
+        // object-fit: ;
+    }
+
+    &__text {
+        margin-top: 1.4rem;
+        &--heading {
+            font-family: $poppins;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        &--para {
+            margin-top: 1.1rem;
+            width: 90%;
+            margin-inline: auto;
+            color: $grayish-violet;
+            text-align: center;
+            font-family: $poppins;
+            font-size: 1.2rem;
+            font-family: 500;
+
+        }
+    }
+
+    &__btn {
+        margin-top: 1.4rem;
+        text-align: center;
+        background-color: $cyan;
+        color: white;
+        padding: .5rem 2rem;
+        font-family: $poppins;
+        border-radius: 100px;
+        border: none;
+        display: block;
+
+        margin-inline: auto;
+        
+    }
+    
+
+    @include respond(tab) {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin-inline: auto;
+
+
+        &__image-box {
+            order: 5;
+        }
+
+        &__text {
+            margin-top: 1.4rem;
+
+            &--heading {
+                text-align: left;
+                font-size: 2.8rem;
+            }
+
+            &--para {
+                font-size: 1.1rem;
+                margin-top: .8rem;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        &__btn {
+            margin-top: 1rem;
+            text-align: left;
+            display: inline;
+        }
+    }
+    
+}
+
+.cta {
+    margin-top: 4.3rem;
+    padding: 1.6rem 0; 
+    background-color: $violet--primary;
+    background-image: url(../images/bg-boost-mobile.svg);
+    background-size: cover;
+    border-radius: 8px;
+    width: 90%;
+    margin-inline: auto;
+
+
+    &__input {
+        width: 80%;
+        display: block;
+        padding: .6rem 0;
+        border-radius: 7px;
+        margin-inline: auto;
+        border: none;
+
+        &:placeholder-shown{
+            padding-left: 12px;
+            font-family: $poppins;
+            font-size: 1.1rem;
+            color: $grayish-violet;
+
+            &:focus{
+                color: $red;
+            }
+        }
+
+        &:focus {
+            outline: 3px solid $red;
+        }
+        &:active {
+            //i want the value inputted to start 12px to the left inside the input field
+
+            // padding-left: 12px;
+        }
+    }
+
+    &__btn {
+        display: block;
+        margin-inline: auto;
+        margin-top: 1.2rem;
+        width: 80%;
+        padding: .8rem 1.4rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: white;
+        background-color: $cyan;
+        border: none;
+        border-radius: 7px;
+    }
+
+    @include respond(tab) {
+        
+        &__form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.7rem;
+        }
+
+        &__input {
+            display: inline;
+            width: 76%;
+            padding: .6rem 0;
+            border-radius: 7px;
+            padding: 0.8rem 0;
+        }
+
+        &__btn {
+            padding: 0.8rem .3rem;
+            width: 20%;
+            display: inline-block;
+            text-align: center;
+            margin-block: auto;
+
+            &:hover {
+                cursor: pointer;
+                //how do i make it lighter??
+                filter: brightness(130%);
+                // opacity: .7;
+            }
+        
+        }
+
+
+    }
+
+
+}
+
+.details {
+    margin-top: 3rem;
+
+}

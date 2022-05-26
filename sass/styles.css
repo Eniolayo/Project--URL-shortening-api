@@ -87,4 +87,210 @@ img {
 
 ul {
   list-style: none;
+}
+
+.header {
+  padding-top: 1.5rem;
+}
+.header__logo-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin-inline: auto;
+}
+@media (min-width: 750px) {
+  .header__logo-box {
+    justify-content: stretch;
+  }
+}
+.header__logo-img {
+  width: 8.5rem;
+}
+.header__icon-hambuger {
+  width: 2.5rem;
+  margin-right: 1.5rem;
+}
+@media (min-width: 750px) {
+  .header__icon-hambuger {
+    display: none;
+  }
+}
+.header__nav {
+  display: none;
+}
+@media (min-width: 750px) {
+  .header__nav {
+    display: flex;
+  }
+  .header__nav-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+  }
+}
+.header__sign-in {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.info {
+  margin-top: 1.8rem;
+}
+.info__image-box {
+  width: 90%;
+  margin-inline: auto;
+}
+.info__text {
+  margin-top: 1.4rem;
+}
+.info__text--heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+.info__text--para {
+  margin-top: 1.1rem;
+  width: 90%;
+  margin-inline: auto;
+  color: hsl(257deg, 7%, 63%);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-family: 500;
+}
+.info__btn {
+  margin-top: 1.4rem;
+  text-align: center;
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  padding: 0.5rem 2rem;
+  font-family: "Poppins", sans-serif;
+  border-radius: 100px;
+  border: none;
+  display: block;
+  margin-inline: auto;
+}
+@media (min-width: 750px) {
+  .info {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-inline: auto;
+  }
+  .info__image-box {
+    order: 5;
+  }
+  .info__text {
+    margin-top: 1.4rem;
+  }
+  .info__text--heading {
+    text-align: left;
+    font-size: 2.8rem;
+  }
+  .info__text--para {
+    font-size: 1.1rem;
+    margin-top: 0.8rem;
+    width: 100%;
+    text-align: left;
+  }
+  .info__btn {
+    margin-top: 1rem;
+    text-align: left;
+    display: inline;
+  }
+}
+
+.cta {
+  margin-top: 4.3rem;
+  padding: 1.6rem 0;
+  background-color: hsl(257deg, 27%, 26%);
+  background-image: url(../images/bg-boost-mobile.svg);
+  background-size: cover;
+  border-radius: 8px;
+  width: 90%;
+  margin-inline: auto;
+}
+.cta__input {
+  width: 80%;
+  display: block;
+  padding: 0.6rem 0;
+  border-radius: 7px;
+  margin-inline: auto;
+  border: none;
+}
+.cta__input:-moz-placeholder-shown {
+  padding-left: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: hsl(257deg, 7%, 63%);
+}
+.cta__input:-ms-input-placeholder {
+  padding-left: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: hsl(257deg, 7%, 63%);
+}
+.cta__input:placeholder-shown {
+  padding-left: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: hsl(257deg, 7%, 63%);
+}
+.cta__input:-moz-placeholder-shown:focus {
+  color: hsl(0deg, 87%, 67%);
+}
+.cta__input:-ms-input-placeholder:focus {
+  color: hsl(0deg, 87%, 67%);
+}
+.cta__input:placeholder-shown:focus {
+  color: hsl(0deg, 87%, 67%);
+}
+.cta__input:focus {
+  outline: 3px solid hsl(0deg, 87%, 67%);
+}
+.cta__btn {
+  display: block;
+  margin-inline: auto;
+  margin-top: 1.2rem;
+  width: 80%;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  background-color: hsl(180deg, 66%, 49%);
+  border: none;
+  border-radius: 7px;
+}
+@media (min-width: 750px) {
+  .cta__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.7rem;
+  }
+  .cta__input {
+    display: inline;
+    width: 76%;
+    padding: 0.6rem 0;
+    border-radius: 7px;
+    padding: 0.8rem 0;
+  }
+  .cta__btn {
+    padding: 0.8rem 0.3rem;
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    margin-block: auto;
+  }
+  .cta__btn:hover {
+    cursor: pointer;
+    filter: brightness(130%);
+  }
+}
+
+.details {
+  margin-top: 3rem;
 }/*# sourceMappingURL=styles.css.map */

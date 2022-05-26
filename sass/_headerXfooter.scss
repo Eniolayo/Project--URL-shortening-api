@@ -1,0 +1,51 @@
+@use '../sass/base' as *;
+
+.header {
+    padding-top: 1.5rem;
+
+    &__logo-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-inline: auto;
+
+        @include respond(tab) {
+            justify-content: stretch;
+        }
+    }
+
+    &__logo-img {
+        width: 8.5rem;
+    }
+
+    &__icon-hambuger {
+        width: 2.5rem;
+        margin-right: 1.5rem;
+
+        @include respond(tab) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        @include respond(tab) {
+            display: flex;
+
+            &-list {
+                display: flex;
+                justify-content: space-between;
+                gap: 2.5rem;
+
+            }
+        }
+    }
+
+    &__sign-in {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+}
