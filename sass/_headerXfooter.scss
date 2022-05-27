@@ -11,7 +11,8 @@
         margin-inline: auto;
 
         @include respond(tab) {
-            
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -22,27 +23,66 @@
     &__icon-hambuger {
         width: 2.5rem;
         cursor: pointer;
-
         @include respond(tab) {
             display: none;
         }
     }
 
     &__nav {
-        display: none;
+        width: 90%;
+        background-color: $violet--primary;
+        padding: 3rem 3rem;
+        color: white;
+        font-family: $poppins;
+        font-weight: 500;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        z-index: 77;
+
+        @include respond(phone) {
+            position: absolute;
+            top: 4%;
+            // max-width: 40rem;
+            margin-inline: auto;
+            left: 100%;
+
+            &-show {
+                animation: left .3s ease-in ;
+                left: 5%;
+            }
+
+
+
+        }
+
+        &-link {
+            padding-bottom: 2rem;
+        }
+
+        
+
+
 
         @include respond(tab) {
             display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            // width: 70%;
 
             &-list {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 gap: 2.5rem;
-
                 font-size: 1.2rem;
                 font-family: $poppins;
                 font-weight: 500;
                 color: $grayish-violet;
+                width: 100%;
 
                 li {
                     transition: all .3s;
@@ -51,14 +91,83 @@
                         color: $violet--secondary;
                     }
                 }
+            }
 
+            &-links {
+                display: flex;
+                gap: 1.2rem;
+            }
+
+            &-link {
+                padding-bottom: 0;
             }
         }
     }
 
     &__sign-in {
+        border-top: .5px solid rgba($color: #fff, $alpha: 0.2);
         display: flex;
-        gap: 2.5rem;
+        flex-direction: column;
+        padding-top: 2.4rem;
+        
+        
+        &__link {
+            padding-bottom: 1rem;
+        }
+        
+        &__btn {
+            background-color: $cyan;
+            display: block;
+            margin-inline: auto;
+            margin-top: 1.2rem;
+            width: 80%;
+            padding: .8rem 1.4rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+            background-color: $cyan;
+            border: none;
+            border-radius: 180px;
+        }
+
+
+
+        @include respond(tab) {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1.7rem;
+            padding-top: 0;
+
+
+            &__link {
+                padding-bottom: 0;
+            }
+
+
+            &__btn {
+                display: inline;
+                margin-top: 0;
+                padding: .8rem .8rem;
+                font-size: 1rem;
+                
+                &:hover {
+                    cursor: pointer;
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
     }
 }
 
