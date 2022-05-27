@@ -22,6 +22,7 @@
     &__icon-hambuger {
         width: 2.5rem;
         margin-right: 1.5rem;
+        cursor: pointer;
 
         @include respond(tab) {
             display: none;
@@ -75,7 +76,6 @@
         padding-top: 1.8rem;
         display: flex;
         gap: 2rem;
-
     }
 
     &__social-icon {
@@ -83,30 +83,50 @@
         height: 2.3rem;
     }
 
+    @include respond(tab) {
+        &__container {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 0 3rem;
+        }
 
+        &__socials {
+            padding-top: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        &__social-icon {
+            width: 1.4rem;
+            height: 1.4rem;
+            cursor: pointer;
+            
+            &:hover{
+                //why isn't fill working??
+                fill: $cyan;
+            }
+        }
+    }
+
+    @include respond(desktop) {
+        &__container {
+            padding: 0 5.2rem;
+        }
+    }
+    
+    
 }
 
 
 .links {
-
+    
     &__container {
-
         display: flex;
         flex-direction: column;
         gap: 2.2rem;
-
-
-
     }
-
-    &__box {
-
-    }
-
-    &__list {
-
-    }
-
+    
     &__heading {
         color: white;
         text-align: center;
@@ -115,7 +135,7 @@
         font-weight: 700;
         padding-bottom: .6rem;
     }
-
+    
     &__footer {
         margin-top: .9rem;
         color: $gray;
@@ -123,7 +143,31 @@
         font-size: 1rem;
         font-family: $poppins;
         font-weight: 500;
+    }
 
 
+    @include respond(tab) {
+        
+        &__container {
+            flex-direction: row;
+            gap: 2.2rem;
+        }
+        
+        &__heading {
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        &__footer {
+            text-align: left;
+            font-size: .8rem;
+            transition: color .6s;
+            cursor: pointer;
+            
+            &:hover {
+                cursor: pointer;
+                color: $cyan;
+            }
+        }
     }
 }

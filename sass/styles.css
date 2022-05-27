@@ -106,6 +106,7 @@ ul {
 .header__icon-hambuger {
   width: 2.5rem;
   margin-right: 1.5rem;
+  cursor: pointer;
 }
 @media (min-width: 750px) {
   .header__icon-hambuger {
@@ -153,6 +154,32 @@ ul {
   width: 2.3rem;
   height: 2.3rem;
 }
+@media (min-width: 750px) {
+  .footer__container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 3rem;
+  }
+  .footer__socials {
+    padding-top: 0;
+    display: flex;
+    gap: 1.5rem;
+  }
+  .footer__social-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    cursor: pointer;
+  }
+  .footer__social-icon:hover {
+    fill: hsl(180deg, 66%, 49%);
+  }
+}
+@media (min-width: 1000px) {
+  .footer__container {
+    padding: 0 5.2rem;
+  }
+}
 
 .links__container {
   display: flex;
@@ -174,6 +201,26 @@ ul {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+}
+@media (min-width: 750px) {
+  .links__container {
+    flex-direction: row;
+    gap: 2.2rem;
+  }
+  .links__heading {
+    text-align: left;
+    font-size: 1.1rem;
+  }
+  .links__footer {
+    text-align: left;
+    font-size: 0.8rem;
+    transition: color 0.6s;
+    cursor: pointer;
+  }
+  .links__footer:hover {
+    cursor: pointer;
+    color: hsl(180deg, 66%, 49%);
+  }
 }
 
 .info {
@@ -336,7 +383,7 @@ ul {
 .details {
   margin-top: 3.2rem;
   background-color: rgba(158, 154, 167, 0.2);
-  padding: 2.5rem 0;
+  padding: 4.5rem 0;
 }
 .details__container {
   width: 90%;
@@ -439,7 +486,6 @@ ul {
 }
 
 .start {
-  margin-top: 3.8rem;
   background-image: url(../images/bg-boost-desktop.svg);
   background-size: cover;
   background-color: hsl(257deg, 27%, 26%);
