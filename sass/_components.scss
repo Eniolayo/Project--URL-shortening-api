@@ -112,11 +112,11 @@
     &__input {
         width: 80%;
         display: block;
-        padding: .6rem 0;
+        padding: .6rem 1.1rem;
         border-radius: 7px;
         margin-inline: auto;
         border: none;
-        padding-inline-start: 12px;
+        
 
         &:placeholder-shown{
             font-family: $poppins;

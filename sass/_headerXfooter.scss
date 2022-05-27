@@ -21,7 +21,6 @@
 
     &__icon-hambuger {
         width: 2.5rem;
-        margin-right: 1.5rem;
         cursor: pointer;
 
         @include respond(tab) {

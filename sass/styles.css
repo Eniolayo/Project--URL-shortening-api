@@ -105,7 +105,6 @@ ul {
 }
 .header__icon-hambuger {
   width: 2.5rem;
-  margin-right: 1.5rem;
   cursor: pointer;
 }
 @media (min-width: 750px) {
@@ -323,12 +322,10 @@ ul {
 .cta__input {
   width: 80%;
   display: block;
-  padding: 0.6rem 0;
+  padding: 0.6rem 1.1rem;
   border-radius: 7px;
   margin-inline: auto;
   border: none;
-  -webkit-padding-start: 12px;
-          padding-inline-start: 12px;
 }
 .cta__input:-moz-placeholder-shown {
   font-family: "Poppins", sans-serif;
