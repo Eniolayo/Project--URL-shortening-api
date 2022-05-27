@@ -17,6 +17,7 @@
     &__text {
         margin-top: 1.4rem;
         &--heading {
+            color: $violet--secondary;
             font-family: $poppins;
             font-size: 2.2rem;
             font-weight: 700;
@@ -115,9 +116,9 @@
         border-radius: 7px;
         margin-inline: auto;
         border: none;
+        padding-inline-start: 12px;
 
         &:placeholder-shown{
-            padding-left: 12px;
             font-family: $poppins;
             font-size: 1.1rem;
             color: $grayish-violet;

@@ -40,6 +40,19 @@
                 justify-content: space-between;
                 gap: 2.5rem;
 
+                font-size: 1.2rem;
+                font-family: $poppins;
+                font-weight: 500;
+                color: $grayish-violet;
+
+                li {
+                    transition: all .3s;
+                    &:hover {
+                        cursor: pointer;
+                        color: $violet--secondary;
+                    }
+                }
+
             }
         }
     }
@@ -75,12 +88,13 @@
     &__socials {
         padding-top: 1.8rem;
         display: flex;
-        gap: 2rem;
+        gap: 1.7rem;
     }
 
     &__social-icon {
         width: 2.3rem;
         height: 2.3rem;
+        fill: white;
     }
 
     @include respond(tab) {
@@ -94,17 +108,18 @@
         &__socials {
             padding-top: 0;
             display: flex;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
         &__social-icon {
             width: 1.4rem;
             height: 1.4rem;
-            cursor: pointer;
             
             &:hover{
+                cursor: pointer;
                 //why isn't fill working??
                 fill: $cyan;
+                // background-color: $cyan;
             }
         }
     }
