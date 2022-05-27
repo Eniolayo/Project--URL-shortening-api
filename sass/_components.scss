@@ -123,7 +123,7 @@
             font-size: 1.1rem;
             color: $grayish-violet;
         }
-        
+
         &:focus {
             outline: 3px solid $red;
         }
@@ -165,24 +165,112 @@
             display: inline-block;
             text-align: center;
             margin-block: auto;
+            transition: background-color .4s;
 
             &:hover {
                 cursor: pointer;
-                //how do i make it lighter??
-                // filter: brightness(130%);
-                opacity: .7;
+                // opacity: .7;
+                background-color: $cyan-btn;
             }
-        
         }
+    }
+}
+.shortened {
+    // margin-top: 2rem;
+    background-color: rgba($grayish-violet, .2);
+    padding: 2.3rem 0;
 
-
+    &__box {
+        width: 90%;
+        margin-inline: auto;
+        background-color: white;
+        border-radius: 7px;
+        padding: 1.4rem 1.7rem;
+    }
+    
+    &__input-value {
+        width: 100%;
+        text-align: left;
+        font-size: 1.6rem;
+        font-family: $poppins;
+        font-weight: 500;
+        padding: .9rem 0;
+        border-bottom: .5px solid rgba( $grayish-violet, .2);
     }
 
+    &__shorten-value{
+        padding: .9rem 0;
+        width: 100%;
+        text-align: left;
+        font-family: $poppins;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: $cyan;
+    }
+    
+    &__btn {
+        color: white;
+        background-color: $cyan;
+        width: 100%;
+        padding: .8rem 1.2rem;
+        font-size: 1.5rem;
+        font-family: $poppins;
+        border: none;
+        border-radius: 8px;
+        font-weight: 500;
+    }
 
+    @include respond(tab) {
+        
+        &__box {
+            padding: .7rem 1.7rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // width: 50%;
+        }
+
+        &__inner-box {
+            display: flex;
+            gap: 1.1rem;
+            align-items: center;
+            justify-content: flex-end;
+            width: 50%;
+        }
+
+        &__input-value {
+            width: 50%;
+            border-bottom: 0;
+        }
+
+        &__shorten-value {
+            padding: 0;
+            width: 100%;
+            text-align: right;
+        }
+
+        &__btn {
+            color: white;
+            background-color: $cyan;
+            width: 13rem;
+            padding: .8rem 1.2rem;
+            transition: background-color .3s;
+
+            &:hover {
+                cursor: pointer;
+                background-color: $cyan-btn;
+            }
+        }
+    }
 }
 
+.short--3,.short--2 {
+    margin-top: 1.2rem;
+}
+
+
 .details {
-    margin-top: 3.2rem;
+    // margin-top: 3.2rem;
     background-color: rgba( $grayish-violet, .2);
     padding: 4.5rem 0;
 
@@ -314,13 +402,13 @@
 //the pseduo element is not responsive
 // .after-box {
 
-//     &::after {
+//     &::before {
 //         content: '';
 //         width: .4rem;
-//         height: 2.8rem;
+//         height: 100%;
 //         background-color: $cyan;
 //         position: absolute;
-//         top: 283px;
+//         top: 238px;
 //         left: 26px;
 //     }
 // }
@@ -350,6 +438,12 @@
         border: none;
         border-radius: 100px;
         font-weight: 700;
+        transition: background-color .4s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $cyan-btn;
+        }
     }
 
     @include respond(tab) {

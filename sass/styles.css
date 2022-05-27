@@ -482,15 +482,95 @@ ul {
     display: inline-block;
     text-align: center;
     margin-block: auto;
+    transition: background-color 0.4s;
   }
   .cta__btn:hover {
     cursor: pointer;
-    opacity: 0.7;
+    background-color: hsl(180deg, 48%, 78%);
   }
 }
 
+.shortened {
+  background-color: rgba(158, 154, 167, 0.2);
+  padding: 2.3rem 0;
+}
+.shortened__box {
+  width: 90%;
+  margin-inline: auto;
+  background-color: white;
+  border-radius: 7px;
+  padding: 1.4rem 1.7rem;
+}
+.shortened__input-value {
+  width: 100%;
+  text-align: left;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 0.9rem 0;
+  border-bottom: 0.5px solid rgba(158, 154, 167, 0.2);
+}
+.shortened__shorten-value {
+  padding: 0.9rem 0;
+  width: 100%;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: hsl(180deg, 66%, 49%);
+}
+.shortened__btn {
+  color: white;
+  background-color: hsl(180deg, 66%, 49%);
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+}
+@media (min-width: 750px) {
+  .shortened__box {
+    padding: 0.7rem 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .shortened__inner-box {
+    display: flex;
+    gap: 1.1rem;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+  }
+  .shortened__input-value {
+    width: 50%;
+    border-bottom: 0;
+  }
+  .shortened__shorten-value {
+    padding: 0;
+    width: 100%;
+    text-align: right;
+  }
+  .shortened__btn {
+    color: white;
+    background-color: hsl(180deg, 66%, 49%);
+    width: 13rem;
+    padding: 0.8rem 1.2rem;
+    transition: background-color 0.3s;
+  }
+  .shortened__btn:hover {
+    cursor: pointer;
+    background-color: hsl(180deg, 48%, 78%);
+  }
+}
+
+.short--3, .short--2 {
+  margin-top: 1.2rem;
+}
+
 .details {
-  margin-top: 3.2rem;
   background-color: rgba(158, 154, 167, 0.2);
   padding: 4.5rem 0;
 }
@@ -617,6 +697,11 @@ ul {
   border: none;
   border-radius: 100px;
   font-weight: 700;
+  transition: background-color 0.4s;
+}
+.start__btn:hover {
+  cursor: pointer;
+  background-color: hsl(180deg, 48%, 78%);
 }
 @media (min-width: 750px) {
   .start {

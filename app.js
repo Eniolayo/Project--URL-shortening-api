@@ -8,3 +8,10 @@ console.log(nav.classList)
 ham.addEventListener('click', () => {
     nav.classList.toggle('header__nav-show');
 })
+
+const btnCopy = document.querySelector('.shortened__btn');
+
+
+btnCopy.addEventListener('click', () =>{
+    btnCopy.textContent = 'Copied!';
+})
