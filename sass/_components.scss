@@ -58,6 +58,7 @@
         justify-content: space-between;
         width: 90%;
         margin-inline: auto;
+        margin-top: 2.6rem;
 
 
         &__image-box {
@@ -335,7 +336,7 @@
     background-image: url(../images/bg-boost-desktop.svg);
     background-size: cover;
     background-color: $violet--primary;
-    padding: 2.5rem 0;
+    padding: 3.5rem 0;
 
     &__heading {
         font-family: $poppins;
@@ -360,4 +361,17 @@
     @include respond(tab) {
         background-image: url(../images/bg-boost-desktop.svg);
     }
+}
+
+.attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: $violet--secondary;
+    font-family: $poppins;
+    color: $grayish-violet;
+}
+
+.attribution a {
+    color: white;
+    text-decoration: none;
 }
