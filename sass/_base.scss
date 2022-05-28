@@ -122,7 +122,7 @@ ul {
     }
   }
 
-  @if $breakpoint ==desktop {
+  @if $breakpoint == desktop {
     @media (min-width: 1000px) {
       @content
     }

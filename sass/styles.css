@@ -504,7 +504,7 @@ ul {
 .shortened__input-value {
   width: 100%;
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   padding: 0.9rem 0;
@@ -516,7 +516,7 @@ ul {
   text-align: left;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: hsl(180deg, 66%, 49%);
 }
 .shortened__btn {
@@ -524,7 +524,7 @@ ul {
   background-color: hsl(180deg, 66%, 49%);
   width: 100%;
   padding: 0.8rem 1.2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
   border: none;
   border-radius: 8px;
@@ -604,6 +604,7 @@ ul {
   width: 90%;
   margin-inline: auto;
   padding: 2.5rem 1rem 1rem 1.5rem;
+  z-index: 500;
 }
 @media (min-width: 750px) {
   .details {
@@ -612,6 +613,7 @@ ul {
   .details__cards-container {
     display: flex;
     gap: 2rem;
+    position: relative;
   }
   .details__heading {
     font-size: 2.2rem;
@@ -666,12 +668,28 @@ ul {
     text-align: left;
     width: 100%;
   }
+  .card--1 {
+    position: relative;
+    z-index: 400;
+  }
   .card--2 {
+    position: relative;
     z-index: 400;
     transform: translateY(35px);
   }
   .card--3 {
+    z-index: 400;
     transform: translateY(65px);
+  }
+  .card__after {
+    display: block;
+    position: absolute;
+    top: 178px;
+    left: 21%;
+    width: 70%;
+    height: 0.3rem;
+    background-color: hsl(180deg, 66%, 49%);
+    z-index: -7;
   }
 }
 
@@ -681,7 +699,7 @@ ul {
   height: 23vh;
   background-color: hsl(180deg, 66%, 49%);
   position: absolute;
-  top: 238px;
+  top: 220px;
   left: 26px;
   z-index: -4;
 }

@@ -191,7 +191,7 @@
     &__input-value {
         width: 100%;
         text-align: left;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         font-family: $poppins;
         font-weight: 500;
         padding: .9rem 0;
@@ -204,7 +204,7 @@
         text-align: left;
         font-family: $poppins;
         font-weight: 500;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         color: $cyan;
     }
     
@@ -213,7 +213,7 @@
         background-color: $cyan;
         width: 100%;
         padding: .8rem 1.2rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-family: $poppins;
         border: none;
         border-radius: 8px;
@@ -309,7 +309,7 @@
         width: 90%;
         margin-inline: auto;
         padding: 2.5rem 1rem 1rem 1.5rem;
-        // z-index: 500;
+        z-index: 500;
     }
 
 
@@ -319,6 +319,7 @@
         &__cards-container {
             display: flex;
             gap: 2rem;
+            position: relative;
         }
 
         &__heading {
@@ -390,13 +391,32 @@
             width: 100%;
         }
 
-
+        &--1 {
+            position: relative;
+            z-index: 400;
+        }
+        
+        
         &--2 {
+            position: relative;
             z-index: 400;
             transform: translateY(35px);
         }
         &--3 {
+            z-index: 400;
             transform: translateY(65px);
+        }
+
+
+        &__after{
+            display: block;
+            position: absolute;
+            top: 178px;
+            left: 21%;
+            width: 70%;
+            height: .3rem;
+            background-color: $cyan;
+            z-index: -7;
         }
     }
 }
@@ -411,19 +431,20 @@
         height: 23vh;
         background-color: $cyan;
         position: absolute;
-        top: 238px;
-        left: 26px;
+        top: 220px;
+        left: 26px; 
         z-index: -4;
 
         @include respond(tab) {
             display: none;
             // transform: rotate(90deg);
-            // height: 7px;
+            // height: 20vh;
             // top: -15px;
             // left: 318px;
         }
     }
 }
+
 
 .start {
     
