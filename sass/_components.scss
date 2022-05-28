@@ -309,6 +309,7 @@
         width: 90%;
         margin-inline: auto;
         padding: 2.5rem 1rem 1rem 1.5rem;
+        // z-index: 500;
     }
 
 
@@ -335,6 +336,7 @@
 
 
 .card {
+    
 
     &__img-box {
         width: 4rem;
@@ -390,6 +392,7 @@
 
 
         &--2 {
+            z-index: 400;
             transform: translateY(35px);
         }
         &--3 {
@@ -400,18 +403,27 @@
 
 
 //the pseduo element is not responsive
-// .after-box {
+.after-box {
 
-//     &::before {
-//         content: '';
-//         width: .4rem;
-//         height: 100%;
-//         background-color: $cyan;
-//         position: absolute;
-//         top: 238px;
-//         left: 26px;
-//     }
-// }
+    &::before {
+        content: '';
+        width: .4rem;
+        height: 23vh;
+        background-color: $cyan;
+        position: absolute;
+        top: 238px;
+        left: 26px;
+        z-index: -4;
+
+        @include respond(tab) {
+            display: none;
+            // transform: rotate(90deg);
+            // height: 7px;
+            // top: -15px;
+            // left: 318px;
+        }
+    }
+}
 
 .start {
     

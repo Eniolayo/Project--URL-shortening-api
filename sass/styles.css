@@ -667,10 +667,27 @@ ul {
     width: 100%;
   }
   .card--2 {
+    z-index: 400;
     transform: translateY(35px);
   }
   .card--3 {
     transform: translateY(65px);
+  }
+}
+
+.after-box::before {
+  content: "";
+  width: 0.4rem;
+  height: 23vh;
+  background-color: hsl(180deg, 66%, 49%);
+  position: absolute;
+  top: 238px;
+  left: 26px;
+  z-index: -4;
+}
+@media (min-width: 750px) {
+  .after-box::before {
+    display: none;
   }
 }
 
