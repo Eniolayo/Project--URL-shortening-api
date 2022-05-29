@@ -135,7 +135,12 @@
     border: none;
     border-radius: 7px;
   }
-
+  @include respond(phone) {
+    &__form {
+      display: grid;
+      gap: 1em;
+    }
+  }
   @include respond(tab) {
     padding: 2rem 0;
     background-image: url(../images/bg-boost-desktop.svg);
