@@ -173,7 +173,6 @@
   background-color: rgba($grayish-violet, 0.2);
   padding: 2.3rem 0;
   max-height: 21rem;
-  user-select: none;
   overflow: hidden;
   @include respond(phone) {
     max-height: 46rem;

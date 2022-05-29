@@ -507,10 +507,6 @@ ul {
   background-color: rgba(158, 154, 167, 0.2);
   padding: 2.3rem 0;
   max-height: 21rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   overflow: hidden;
 }
 @media (max-width: 749px) {
