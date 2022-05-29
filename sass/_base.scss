@@ -1,20 +1,18 @@
 //font variable
-$poppins:  'Poppins',sans-serif;
+$poppins: "Poppins", sans-serif;
 
-//colour variables 
-$cyan:  hsl(180, 66%, 49%);
-$cyan-btn:  hsl(180, 48%, 78%);
+//colour variables
+$cyan: hsl(180, 66%, 49%);
+$cyan-btn: hsl(180, 48%, 78%);
 $violet--primary: hsl(257, 27%, 26%);
 $violet--secondary: hsl(260, 8%, 14%);
 
-$gray : hsl(0, 0%, 75%);
+$gray: hsl(0, 0%, 75%);
 
 $grayish-violet: hsl(257, 7%, 63%);
 $dark-blue: hsl(255, 11%, 22%);
 
-
-
-//active colour 
+//active colour
 $red: hsl(0, 87%, 67%);
 
 /*
@@ -23,15 +21,15 @@ $red: hsl(0, 87%, 67%);
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-  }
-  
-  /*
+  box-sizing: border-box;
+}
+
+/*
   2. Remove default margin
   */
-  * {
+* {
   padding: 0;
-    margin: 0;
+  margin: 0;
 }
 
 /*
@@ -39,8 +37,8 @@ $red: hsl(0, 87%, 67%);
 */
 html,
 body {
-    height: 100%;
-    overflow-x: hidden;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 /*
@@ -49,8 +47,8 @@ body {
   5. Improve text rendering
 */
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*
@@ -61,8 +59,8 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /*
@@ -72,7 +70,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /*
@@ -85,7 +83,7 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /*
@@ -93,38 +91,38 @@ h6 {
 */
 #root,
 #__next {
-    isolation: isolate;
+  isolation: isolate;
 }
 
 html {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-      @media (max-width: 749px) {
-          @content
-      }
+    @media (max-width: 749px) {
+      @content;
+    }
   }
 
   @if $breakpoint ==tab {
-    @media (min-width:750px) {
-      @content
+    @media (min-width: 750px) {
+      @content;
     }
   }
 
   @if $breakpoint == desktop {
     @media (min-width: 1000px) {
-      @content
+      @content;
     }
   }
 }

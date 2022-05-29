@@ -97,9 +97,15 @@
   border-radius: 8px;
   width: 90%;
   margin-inline: auto;
-
-  &__input {
+  &__text {
     width: 80%;
+    margin-inline: auto;
+    i {
+      display: block;
+    }
+  }
+  &__input {
+    width: 100%;
     display: block;
     padding: 0.6rem 1.1rem;
     border-radius: 7px;
