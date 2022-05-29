@@ -99,6 +99,8 @@
     margin-inline: auto;
     i {
       display: block;
+      color: $red;
+      font-weight: bold;
     }
   }
   &__input {
@@ -164,6 +166,7 @@
 .shortened {
   background-color: rgba($grayish-violet, 0.2);
   padding: 2.3rem 0;
+  max-height: 27rem;
 
   &__box {
     width: 90%;

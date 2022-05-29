@@ -428,6 +428,8 @@ ul {
 }
 .cta__text i {
   display: block;
+  color: hsl(0deg, 87%, 67%);
+  font-weight: bold;
 }
 .cta__input {
   width: 100%;
@@ -496,6 +498,7 @@ ul {
 .shortened {
   background-color: rgba(158, 154, 167, 0.2);
   padding: 2.3rem 0;
+  max-height: 27rem;
 }
 .shortened__box {
   width: 90%;
