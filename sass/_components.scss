@@ -1,498 +1,467 @@
-@use '../sass/base' as *;
+@use "../sass/base" as *;
 
 .info {
-    margin-top: 1.8rem;
+  margin-top: 1.8rem;
 
-    &__image-box {
-        width: 90%;
-        margin-inline: auto;
+  &__image-box {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  &__image {
+  }
+
+  &__text {
+    margin-top: 1.4rem;
+    &--heading {
+      color: $violet--secondary;
+      font-family: $poppins;
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.2;
     }
 
-    &__image {
-        //how did they make the image like that??
-        // width: 80%;
-        // object-fit: ;
+    &--para {
+      margin-top: 1.1rem;
+      width: 90%;
+      margin-inline: auto;
+      color: $grayish-violet;
+      text-align: center;
+      font-family: $poppins;
+      font-size: 1.2rem;
+      font-family: 500;
+    }
+  }
+
+  &__btn {
+    margin-top: 1.4rem;
+    text-align: center;
+    background-color: $cyan;
+    color: white;
+    padding: 0.5rem 2rem;
+    font-family: $poppins;
+    border-radius: 100px;
+    border: none;
+    display: block;
+
+    margin-inline: auto;
+  }
+
+  @include respond(tab) {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 2rem;
+
+    &__image-box {
+      order: 5;
     }
 
     &__text {
-        margin-top: 1.4rem;
-        &--heading {
-            color: $violet--secondary;
-            font-family: $poppins;
-            font-size: 2.2rem;
-            font-weight: 700;
-            text-align: center;
-            line-height: 1.2;
-        }
+      margin-top: 1.4rem;
 
-        &--para {
-            margin-top: 1.1rem;
-            width: 90%;
-            margin-inline: auto;
-            color: $grayish-violet;
-            text-align: center;
-            font-family: $poppins;
-            font-size: 1.2rem;
-            font-family: 500;
+      &--heading {
+        text-align: left;
+        font-size: 2.8rem;
+      }
 
-        }
+      &--para {
+        font-size: 1.1rem;
+        margin-top: 0.8rem;
+        width: 100%;
+        text-align: left;
+      }
     }
 
     &__btn {
-        margin-top: 1.4rem;
-        text-align: center;
-        background-color: $cyan;
-        color: white;
-        padding: .5rem 2rem;
-        font-family: $poppins;
-        border-radius: 100px;
-        border: none;
-        display: block;
+      margin-top: 1rem;
+      text-align: left;
+      display: inline;
 
-        margin-inline: auto;
-        
+      &:hover {
+        cursor: pointer;
+        opacity: 0.7;
+      }
     }
-    
-
-    @include respond(tab) {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        margin-inline: auto;
-        margin-top: 2rem;
-
-
-        &__image-box {
-            order: 5;
-        }
-
-        &__text {
-            margin-top: 1.4rem;
-
-            &--heading {
-                text-align: left;
-                font-size: 2.8rem;
-            }
-
-            &--para {
-                font-size: 1.1rem;
-                margin-top: .8rem;
-                width: 100%;
-                text-align: left;
-            }
-        }
-
-        &__btn {
-            margin-top: 1rem;
-            text-align: left;
-            display: inline;
-
-            &:hover {
-                cursor: pointer;
-                //how do i make it lighter??
-                // filter: brightness(130%);
-                opacity: .7;
-            }
-        }
-    }
-    
+  }
 }
 
 .cta {
-    margin-top: 4.3rem;
-    padding: 1.6rem 0; 
-    background-color: $violet--primary;
-    background-image: url(../images/bg-boost-mobile.svg);
-    background-size: cover;
-    border-radius: 8px;
-    width: 90%;
-    margin-inline: auto;
+  margin-top: 4.3rem;
+  padding: 1.6rem 0;
+  background-color: $violet--primary;
+  background-image: url(../images/bg-boost-mobile.svg);
+  background-size: cover;
+  border-radius: 8px;
+  width: 90%;
+  margin-inline: auto;
 
+  &__input {
+    width: 80%;
+    display: block;
+    padding: 0.6rem 1.1rem;
+    border-radius: 7px;
+    margin-inline: auto;
+    border: none;
+
+    &:placeholder-shown {
+      font-family: $poppins;
+      font-size: 1.1rem;
+      color: $grayish-violet;
+    }
+
+    &:focus {
+      outline: 3px solid $red;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin-inline: auto;
+    margin-top: 1.2rem;
+    width: 80%;
+    padding: 0.8rem 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    background-color: $cyan;
+    border: none;
+    border-radius: 7px;
+  }
+
+  @include respond(tab) {
+    padding: 2rem 0;
+    background-image: url(../images/bg-boost-desktop.svg);
+
+    &__form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1.7rem;
+    }
 
     &__input {
-        width: 80%;
-        display: block;
-        padding: .6rem 1.1rem;
-        border-radius: 7px;
-        margin-inline: auto;
-        border: none;
-        
-
-        &:placeholder-shown{
-            font-family: $poppins;
-            font-size: 1.1rem;
-            color: $grayish-violet;
-        }
-
-        &:focus {
-            outline: 3px solid $red;
-        }
+      display: inline;
+      width: 76%;
     }
 
     &__btn {
-        display: block;
-        margin-inline: auto;
-        margin-top: 1.2rem;
-        width: 80%;
-        padding: .8rem 1.4rem;
-        font-size: 1.3rem;
-        font-weight: 700;
-        color: white;
-        background-color: $cyan;
-        border: none;
-        border-radius: 7px;
+      padding: 0.6rem 0.3rem;
+      width: 20%;
+      display: inline-block;
+      text-align: center;
+      margin-block: auto;
+      transition: background-color 0.4s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $cyan-btn;
+      }
     }
-
-    @include respond(tab) {
-        padding: 2rem 0;
-        background-image: url(../images/bg-boost-desktop.svg);
-        
-        &__form {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 1.7rem;
-        }
-
-        &__input {
-            display: inline;
-            width: 76%;
-        }
-
-        &__btn {
-            padding: 0.6rem .3rem;
-            width: 20%;
-            display: inline-block;
-            text-align: center;
-            margin-block: auto;
-            transition: background-color .4s;
-
-            &:hover {
-                cursor: pointer;
-                // opacity: .7;
-                background-color: $cyan-btn;
-            }
-        }
-    }
+  }
 }
 .shortened {
-    // margin-top: 2rem;
-    background-color: rgba($grayish-violet, .2);
-    padding: 2.3rem 0;
+  background-color: rgba($grayish-violet, 0.2);
+  padding: 2.3rem 0;
 
+  &__box {
+    width: 90%;
+    margin-inline: auto;
+    background-color: white;
+    border-radius: 7px;
+    padding: 1.4rem 1.7rem;
+  }
+
+  &__input-value {
+    width: 100%;
+    text-align: left;
+    font-size: 1.4rem;
+    font-family: $poppins;
+    font-weight: 500;
+    padding: 0.9rem 0;
+    border-bottom: 0.5px solid rgba($grayish-violet, 0.2);
+  }
+
+  &__shorten-value {
+    padding: 0.9rem 0;
+    width: 100%;
+    text-align: left;
+    font-family: $poppins;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: $cyan;
+  }
+
+  &__btn {
+    color: white;
+    background-color: $cyan;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.2rem;
+    font-family: $poppins;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
+  @include respond(tab) {
     &__box {
-        width: 90%;
-        margin-inline: auto;
-        background-color: white;
-        border-radius: 7px;
-        padding: 1.4rem 1.7rem;
+      padding: 0.7rem 1.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    
+
+    &__inner-box {
+      display: flex;
+      gap: 1.1rem;
+      align-items: center;
+      justify-content: flex-end;
+      width: 50%;
+    }
+
     &__input-value {
-        width: 100%;
-        text-align: left;
-        font-size: 1.4rem;
-        font-family: $poppins;
-        font-weight: 500;
-        padding: .9rem 0;
-        border-bottom: .5px solid rgba( $grayish-violet, .2);
+      width: 50%;
+      border-bottom: 0;
     }
 
-    &__shorten-value{
-        padding: .9rem 0;
-        width: 100%;
-        text-align: left;
-        font-family: $poppins;
-        font-weight: 500;
-        font-size: 1.4rem;
-        color: $cyan;
+    &__shorten-value {
+      padding: 0;
+      width: 100%;
+      text-align: right;
     }
-    
+
     &__btn {
-        color: white;
-        background-color: $cyan;
-        width: 100%;
-        padding: .8rem 1.2rem;
-        font-size: 1.2rem;
-        font-family: $poppins;
-        border: none;
-        border-radius: 8px;
-        font-weight: 500;
+      color: white;
+      background-color: $cyan;
+      width: 13rem;
+      padding: 0.8rem 1.2rem;
+      transition: background-color 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $cyan-btn;
+      }
     }
-
-    @include respond(tab) {
-        
-        &__box {
-            padding: .7rem 1.7rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            // width: 50%;
-        }
-
-        &__inner-box {
-            display: flex;
-            gap: 1.1rem;
-            align-items: center;
-            justify-content: flex-end;
-            width: 50%;
-        }
-
-        &__input-value {
-            width: 50%;
-            border-bottom: 0;
-        }
-
-        &__shorten-value {
-            padding: 0;
-            width: 100%;
-            text-align: right;
-        }
-
-        &__btn {
-            color: white;
-            background-color: $cyan;
-            width: 13rem;
-            padding: .8rem 1.2rem;
-            transition: background-color .3s;
-
-            &:hover {
-                cursor: pointer;
-                background-color: $cyan-btn;
-            }
-        }
-    }
+  }
 }
 
-.short--3,.short--2 {
-    margin-top: 1.2rem;
+.short--3,
+.short--2 {
+  margin-top: 1.2rem;
 }
-
 
 .details {
-    // margin-top: 3.2rem;
-    background-color: rgba( $grayish-violet, .2);
-    padding: 4.5rem 0;
+  background-color: rgba($grayish-violet, 0.2);
+  padding: 4.5rem 0;
 
-    &__container {
-        width: 90%;
-        margin-inline: auto;
-    }
+  &__container {
+    width: 90%;
+    margin-inline: auto;
+  }
 
-    &__heading {
-        text-align: center;
-        font-family: $poppins;
-        font-size: 1.8rem;
-    }
+  &__heading {
+    text-align: center;
+    font-family: $poppins;
+    font-size: 1.8rem;
+  }
 
-    &__para {
-        margin-top: 1rem;
-        text-align: center;
-        font-size: 1.4rem;
-        color: $grayish-violet;
-        font-weight: 500;
-        width: 90%;
-        margin-inline: auto;
-    }
+  &__para {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: $grayish-violet;
+    font-weight: 500;
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  &__cards-container {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  &__card {
+    border-radius: 6px;
+    margin-top: 4.6rem;
+    background-color: white;
+    text-align: center;
+    width: 90%;
+    margin-inline: auto;
+    padding: 2.5rem 1rem 1rem 1.5rem;
+    z-index: 500;
+  }
+
+  @include respond(tab) {
+    padding-bottom: 9.5rem;
 
     &__cards-container {
-        width: 90%;
-        margin-inline: auto;
-    }
-    
-    &__card {
-        border-radius: 6px;
-        margin-top: 4.6rem;
-        background-color: white;
-        // box-shadow: 2px 2px 2px black;
-        text-align: center;
-        width: 90%;
-        margin-inline: auto;
-        padding: 2.5rem 1rem 1rem 1.5rem;
-        z-index: 500;
-    }
-
-
-    @include respond(tab) {
-        padding-bottom: 9.5rem;
-
-        &__cards-container {
-            display: flex;
-            gap: 2rem;
-            position: relative;
-        }
-
-        &__heading {
-            font-size: 2.2rem;
-        }
-
-        &__para {
-            width: 50%;
-            font-size: 1.7rem;
-        }
-
-        
-    }
-}
-
-
-.card {
-    
-
-    &__img-box {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-        padding: .8rem;
-        background-color: $violet--primary;
-        position: relative;
-        top: -66px;
-        left: 38%;
-    }
-
-    &__img {
-        width: 2rem;
-        height: 2rem;
-        position: absolute;
-        left: 15px;
-        top: 14px;
+      display: flex;
+      gap: 2rem;
+      position: relative;
     }
 
     &__heading {
-        font-family: $poppins;
-        font-weight: 700;
-        font-size: 1.2rem;
-        transform: translateY(-42px);
+      font-size: 2.2rem;
     }
-    
+
     &__para {
-        margin-top: 1rem;
-        text-align: center;
-        font-size: 1.1rem;
-        color: $grayish-violet;
-        font-weight: 500;
-        width: 90%;
-        margin-inline: auto;
-        transform: translateY(-42px);
+      width: 50%;
+      font-size: 1.7rem;
     }
-
-    @include respond(tab) {
-        &__img-box {
-            left: 3%;
-        }
-
-        &__heading {
-            text-align: left;
-        }
-
-
-        &__para {
-            text-align: left;
-            width: 100%;
-        }
-
-        &--1 {
-            position: relative;
-            z-index: 400;
-        }
-        
-        
-        &--2 {
-            position: relative;
-            z-index: 400;
-            transform: translateY(35px);
-        }
-        &--3 {
-            z-index: 400;
-            transform: translateY(65px);
-        }
-
-
-        &__after{
-            display: block;
-            position: absolute;
-            top: 178px;
-            left: 21%;
-            width: 70%;
-            height: .3rem;
-            background-color: $cyan;
-            z-index: -7;
-        }
-    }
+  }
 }
 
+.card {
+  &__img-box {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0.8rem;
+    background-color: $violet--primary;
+    position: relative;
+    top: -66px;
+    left: 38%;
+  }
+
+  &__img {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    left: 15px;
+    top: 14px;
+  }
+
+  &__heading {
+    font-family: $poppins;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transform: translateY(-42px);
+  }
+
+  &__para {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: $grayish-violet;
+    font-weight: 500;
+    width: 90%;
+    margin-inline: auto;
+    transform: translateY(-42px);
+  }
+
+  @include respond(tab) {
+    &__img-box {
+      left: 3%;
+    }
+
+    &__heading {
+      text-align: left;
+    }
+
+    &__para {
+      text-align: left;
+      width: 100%;
+    }
+
+    &--1 {
+      position: relative;
+      z-index: 400;
+    }
+
+    &--2 {
+      position: relative;
+      z-index: 400;
+      transform: translateY(35px);
+    }
+    &--3 {
+      z-index: 400;
+      transform: translateY(65px);
+    }
+
+    &__after {
+      display: block;
+      position: absolute;
+      top: 178px;
+      left: 21%;
+      width: 70%;
+      height: 0.3rem;
+      background-color: $cyan;
+      z-index: -7;
+    }
+  }
+}
 
 //the pseduo element is not responsive
 .after-box {
-
-    &::before {
-        content: '';
-        width: .4rem;
-        height: 23vh;
-        background-color: $cyan;
-        position: absolute;
-        top: 220px;
-        left: 26px; 
-        z-index: -4;
-
-        @include respond(tab) {
-            display: none;
-            // transform: rotate(90deg);
-            // height: 20vh;
-            // top: -15px;
-            // left: 318px;
-        }
-    }
-}
-
-
-.start {
-    
-    background-image: url(../images/bg-boost-desktop.svg);
-    background-size: cover;
-    background-color: $violet--primary;
-    padding: 3.5rem 0;
-
-    &__heading {
-        font-family: $poppins;
-        font-size: 1.8rem;
-        color: white;
-        text-align: center;
-    }
-
-    &__btn {
-        display: block;
-        margin-inline: auto;
-        margin-top: .8rem;
-        padding: .7rem 2.8rem;
-        font-family: $poppins;
-        color: white;
-        background-color: $cyan;
-        border: none;
-        border-radius: 100px;
-        font-weight: 700;
-        transition: background-color .4s;
-
-        &:hover {
-            cursor: pointer;
-            background-color: $cyan-btn;
-        }
-    }
+  &::before {
+    content: "";
+    width: 0.4rem;
+    height: 23vh;
+    background-color: $cyan;
+    position: absolute;
+    top: 220px;
+    left: 26px;
+    z-index: -4;
 
     @include respond(tab) {
-        background-image: url(../images/bg-boost-desktop.svg);
+      display: none;
+      // transform: rotate(90deg);
+      // height: 20vh;
+      // top: -15px;
+      // left: 318px;
     }
+  }
+}
+
+.start {
+  background-image: url(../images/bg-boost-desktop.svg);
+  background-size: cover;
+  background-color: $violet--primary;
+  padding: 3.5rem 0;
+
+  &__heading {
+    font-family: $poppins;
+    font-size: 1.8rem;
+    color: white;
+    text-align: center;
+  }
+
+  &__btn {
+    display: block;
+    margin-inline: auto;
+    margin-top: 0.8rem;
+    padding: 0.7rem 2.8rem;
+    font-family: $poppins;
+    color: white;
+    background-color: $cyan;
+    border: none;
+    border-radius: 100px;
+    font-weight: 700;
+    transition: background-color 0.4s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $cyan-btn;
+    }
+  }
+
+  @include respond(tab) {
+    background-image: url(../images/bg-boost-desktop.svg);
+  }
 }
 
 .attribution {
-    font-size: 1.1rem;
-    text-align: center;
-    background-color: $violet--secondary;
-    font-family: $poppins;
-    color: $grayish-violet;
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: $violet--secondary;
+  font-family: $poppins;
+  color: $grayish-violet;
 }
 
 .attribution a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }

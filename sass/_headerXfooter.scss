@@ -1,296 +1,268 @@
-@use '../sass/base' as *;
+@use "../sass/base" as *;
 
 .header {
-    padding-top: 1.5rem;
+  padding-top: 1.5rem;
 
-    &__logo-box {
+  &__logo-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-inline: auto;
+
+    @include respond(tab) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__logo-img {
+    width: 8.5rem;
+  }
+
+  &__icon-hambuger {
+    width: 2.5rem;
+    cursor: pointer;
+    @include respond(tab) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    width: 90%;
+    background-color: $violet--primary;
+    padding: 3rem 3rem;
+    color: white;
+    font-family: $poppins;
+    font-weight: 500;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 77;
+
+    @include respond(phone) {
+      position: absolute;
+      top: 4%;
+      margin-inline: auto;
+      left: 100%;
+
+      &-show {
+        animation: left 0.3s ease-in;
+        left: 5%;
+      }
+    }
+
+    &-link {
+      padding-bottom: 2rem;
+    }
+
+    @include respond(tab) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      // width: 70%;
+
+      &-list {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
-        margin-inline: auto;
-
-        @include respond(tab) {
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-    &__logo-img {
-        width: 8.5rem;
-    }
-
-    &__icon-hambuger {
-        width: 2.5rem;
-        cursor: pointer;
-        @include respond(tab) {
-            display: none;
-        }
-    }
-
-    &__nav {
-        width: 90%;
-        background-color: $violet--primary;
-        padding: 3rem 3rem;
-        color: white;
+        gap: 2.5rem;
+        font-size: 1.2rem;
         font-family: $poppins;
         font-weight: 500;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 1.4rem;
+        color: $grayish-violet;
+        width: 100%;
+
+        li {
+          transition: all 0.3s;
+          &:hover {
+            cursor: pointer;
+            color: $violet--secondary;
+          }
+        }
+      }
+
+      &-links {
         display: flex;
-        flex-direction: column;
-        z-index: 77;
+        gap: 1.2rem;
+      }
 
-        @include respond(phone) {
-            position: absolute;
-            top: 4%;
-            // max-width: 40rem;
-            margin-inline: auto;
-            left: 100%;
+      &-link {
+        padding-bottom: 0;
+      }
+    }
+  }
 
-            &-show {
-                animation: left .3s ease-in ;
-                left: 5%;
-            }
+  &__sign-in {
+    border-top: 0.5px solid rgba($color: #fff, $alpha: 0.2);
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.4rem;
 
-
-
-        }
-
-        &-link {
-            padding-bottom: 2rem;
-        }
-
-        
-
-
-
-        @include respond(tab) {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: transparent;
-            // width: 70%;
-
-            &-list {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 2.5rem;
-                font-size: 1.2rem;
-                font-family: $poppins;
-                font-weight: 500;
-                color: $grayish-violet;
-                width: 100%;
-
-                li {
-                    transition: all .3s;
-                    &:hover {
-                        cursor: pointer;
-                        color: $violet--secondary;
-                    }
-                }
-            }
-
-            &-links {
-                display: flex;
-                gap: 1.2rem;
-            }
-
-            &-link {
-                padding-bottom: 0;
-            }
-        }
+    &__link {
+      padding-bottom: 1rem;
     }
 
-    &__sign-in {
-        border-top: .5px solid rgba($color: #fff, $alpha: 0.2);
-        display: flex;
-        flex-direction: column;
-        padding-top: 2.4rem;
-        
-        
-        &__link {
-            padding-bottom: 1rem;
-        }
-        
-        &__btn {
-            background-color: $cyan;
-            display: block;
-            margin-inline: auto;
-            margin-top: 1.2rem;
-            width: 80%;
-            padding: .8rem 1.4rem;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: white;
-            background-color: $cyan;
-            border: none;
-            border-radius: 180px;
-        }
-
-
-
-        @include respond(tab) {
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 1.7rem;
-            padding-top: 0;
-
-
-            &__link {
-                padding-bottom: 0;
-            }
-
-
-            &__btn {
-                display: inline;
-                margin-top: 0;
-                padding: .8rem .8rem;
-                font-size: 1rem;
-                
-                &:hover {
-                    cursor: pointer;
-                    opacity: .7;
-                }
-            }
-        }
+    &__btn {
+      background-color: $cyan;
+      display: block;
+      margin-inline: auto;
+      margin-top: 1.2rem;
+      width: 80%;
+      padding: 0.8rem 1.4rem;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: white;
+      background-color: $cyan;
+      border: none;
+      border-radius: 180px;
     }
+
+    @include respond(tab) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1.7rem;
+      padding-top: 0;
+
+      &__link {
+        padding-bottom: 0;
+      }
+
+      &__btn {
+        display: inline;
+        margin-top: 0;
+        padding: 0.8rem 0.8rem;
+        font-size: 1rem;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
 }
 
 @keyframes left {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
-
 .footer {
-    background-color: $violet--secondary;
-    padding: 5.2rem 0;
-    width: 100%;
+  background-color: $violet--secondary;
+  padding: 5.2rem 0;
+  width: 100%;
 
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__logo {
+    color: white;
+  }
+
+  &__socials {
+    padding-top: 1.8rem;
+    display: flex;
+    gap: 1.7rem;
+  }
+
+  &__social-icon {
+    width: 2.3rem;
+    height: 2.3rem;
+    fill: white;
+  }
+
+  @include respond(tab) {
     &__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 3rem;
-
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 0 3rem;
     }
-
-    &__logo {
-        color: white;
-        //what is giving the logo it's width??
-        // width: 12rem;
-        
-    }
-
 
     &__socials {
-        padding-top: 1.8rem;
-        display: flex;
-        gap: 1.7rem;
+      padding-top: 0;
+      display: flex;
+      gap: 1.2rem;
     }
 
     &__social-icon {
-        width: 2.3rem;
-        height: 2.3rem;
-        fill: white;
+      width: 1.4rem;
+      height: 1.4rem;
+
+      &:hover {
+        cursor: pointer;
+        fill: $cyan;
+      }
     }
+  }
 
-    @include respond(tab) {
-        &__container {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
-            padding: 0 3rem;
-        }
-
-        &__socials {
-            padding-top: 0;
-            display: flex;
-            gap: 1.2rem;
-        }
-
-        &__social-icon {
-            width: 1.4rem;
-            height: 1.4rem;
-            
-            &:hover{
-                cursor: pointer;
-                //why isn't fill working??
-                fill: $cyan;
-                // background-color: $cyan;
-            }
-        }
+  @include respond(desktop) {
+    &__container {
+      padding: 0 5.2rem;
     }
-
-    @include respond(desktop) {
-        &__container {
-            padding: 0 5.2rem;
-        }
-    }
-    
-    
+  }
 }
 
-
 .links {
-    
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+
+  &__heading {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: $poppins;
+    font-weight: 700;
+    padding-bottom: 0.6rem;
+  }
+
+  &__footer {
+    margin-top: 0.9rem;
+    color: $gray;
+    text-align: center;
+    font-size: 1rem;
+    font-family: $poppins;
+    font-weight: 500;
+  }
+
+  @include respond(tab) {
     &__container {
-        display: flex;
-        flex-direction: column;
-        gap: 2.2rem;
+      flex-direction: row;
+      gap: 2.2rem;
     }
-    
+
     &__heading {
-        color: white;
-        text-align: center;
-        font-size: 1.2rem;
-        font-family: $poppins;
-        font-weight: 700;
-        padding-bottom: .6rem;
+      text-align: left;
+      font-size: 1.1rem;
     }
-    
+
     &__footer {
-        margin-top: .9rem;
-        color: $gray;
-        text-align: center;
-        font-size: 1rem;
-        font-family: $poppins;
-        font-weight: 500;
+      text-align: left;
+      font-size: 0.8rem;
+      transition: color 0.6s;
+      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+        color: $cyan;
+      }
     }
-
-
-    @include respond(tab) {
-        
-        &__container {
-            flex-direction: row;
-            gap: 2.2rem;
-        }
-        
-        &__heading {
-            text-align: left;
-            font-size: 1.1rem;
-        }
-
-        &__footer {
-            text-align: left;
-            font-size: .8rem;
-            transition: color .6s;
-            cursor: pointer;
-            
-            &:hover {
-                cursor: pointer;
-                color: $cyan;
-            }
-        }
-    }
+  }
 }
