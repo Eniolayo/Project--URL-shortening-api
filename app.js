@@ -11,7 +11,9 @@ ham.addEventListener("click", () => {
   nav.classList.toggle("header__nav-show");
 });
 
-btnShorten.addEventListener("click", () => {
+btnShorten.addEventListener("click", (e) => {
+  e.preventDefault();
+  
   shortenedURL().catch(() => {
     errorLink.style.display = "block";
     setTimeout(() => {
@@ -38,6 +40,8 @@ async function shortenedURL() {
     </div>
   `;
   shortenedArea.prepend(shortenedBox);
+  inputShorten.value = "";
+
 }
 let btnCopy = document.querySelector(".shortened__btn");
 function btnStyling() {
