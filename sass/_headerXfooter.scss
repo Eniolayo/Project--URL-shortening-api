@@ -47,10 +47,11 @@
       top: 6%;
       margin-inline: auto;
       left: 100%;
+      width: 80%;
 
       &-show {
         animation: left 0.3s ease-in;
-        left: 5%;
+        left: 8%;
       }
     }
 

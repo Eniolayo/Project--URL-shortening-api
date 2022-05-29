@@ -138,11 +138,12 @@ ul {
     top: 6%;
     margin-inline: auto;
     left: 100%;
+    width: 80%;
   }
   .header__nav-show {
     -webkit-animation: left 0.3s ease-in;
             animation: left 0.3s ease-in;
-    left: 5%;
+    left: 8%;
   }
 }
 .header__nav-link {
