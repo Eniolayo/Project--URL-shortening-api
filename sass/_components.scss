@@ -167,6 +167,8 @@
   background-color: rgba($grayish-violet, 0.2);
   padding: 2.3rem 0;
   max-height: 27rem;
+  user-select: none;
+  overflow: hidden;
 
   &__box {
     width: 90%;
@@ -179,7 +181,7 @@
   &__input-value {
     width: 100%;
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 18px;
     font-family: $poppins;
     font-weight: 500;
     padding: 0.9rem 0;
@@ -192,7 +194,7 @@
     text-align: left;
     font-family: $poppins;
     font-weight: 500;
-    font-size: 1.4rem;
+    font-size: 18px;
     color: $cyan;
   }
 
@@ -221,7 +223,6 @@
       gap: 1.1rem;
       align-items: center;
       justify-content: flex-end;
-      width: 50%;
     }
 
     &__input-value {
@@ -396,7 +397,6 @@
   }
 }
 
-//the pseduo element is not responsive
 .after-box {
   &::before {
     content: "";
@@ -410,11 +410,6 @@
 
     @include respond(tab) {
       display: none;
-      // transform: rotate(90deg);
-      // height: 20vh;
-      // top: -15px;
-      // left: 318px;
-    }
   }
 }
 
@@ -466,4 +461,5 @@
 .attribution a {
   color: white;
   text-decoration: none;
+}
 }

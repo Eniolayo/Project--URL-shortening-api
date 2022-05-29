@@ -499,6 +499,11 @@ ul {
   background-color: rgba(158, 154, 167, 0.2);
   padding: 2.3rem 0;
   max-height: 27rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
 }
 .shortened__box {
   width: 90%;
@@ -510,7 +515,7 @@ ul {
 .shortened__input-value {
   width: 100%;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   padding: 0.9rem 0;
@@ -522,7 +527,7 @@ ul {
   text-align: left;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 18px;
   color: hsl(180deg, 66%, 49%);
 }
 .shortened__btn {
@@ -548,7 +553,6 @@ ul {
     gap: 1.1rem;
     align-items: center;
     justify-content: flex-end;
-    width: 50%;
   }
   .shortened__input-value {
     width: 50%;
@@ -715,20 +719,19 @@ ul {
     display: none;
   }
 }
-
-.start {
+.after-box .start {
   background-image: url(../images/bg-boost-desktop.svg);
   background-size: cover;
   background-color: hsl(257deg, 27%, 26%);
   padding: 3.5rem 0;
 }
-.start__heading {
+.after-box .start__heading {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   color: white;
   text-align: center;
 }
-.start__btn {
+.after-box .start__btn {
   display: block;
   margin-inline: auto;
   margin-top: 0.8rem;
@@ -741,25 +744,23 @@ ul {
   font-weight: 700;
   transition: background-color 0.4s;
 }
-.start__btn:hover {
+.after-box .start__btn:hover {
   cursor: pointer;
   background-color: hsl(180deg, 48%, 78%);
 }
 @media (min-width: 750px) {
-  .start {
+  .after-box .start {
     background-image: url(../images/bg-boost-desktop.svg);
   }
 }
-
-.attribution {
+.after-box .attribution {
   font-size: 1.1rem;
   text-align: center;
   background-color: hsl(260deg, 8%, 14%);
   font-family: "Poppins", sans-serif;
   color: hsl(257deg, 7%, 63%);
 }
-
-.attribution a {
+.after-box .attribution a {
   color: white;
   text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */
