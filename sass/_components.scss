@@ -8,9 +8,6 @@
     margin-inline: auto;
   }
 
-  &__image {
-  }
-
   &__text {
     margin-top: 1.4rem;
     &--heading {
@@ -126,7 +123,6 @@
   &__btn {
     display: block;
     margin-inline: auto;
-    margin-top: 1.2rem;
     width: 80%;
     padding: 0.8rem 1.4rem;
     font-size: 1.3rem;
@@ -144,21 +140,18 @@
     &__form {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       padding: 0 1.7rem;
     }
 
     &__input {
-      display: inline;
-      width: 76%;
+      width: 87%;
+      margin-inline: unset;
     }
 
     &__btn {
       padding: 0.6rem 0.3rem;
       width: 20%;
-      display: inline-block;
-      text-align: center;
-      margin-block: auto;
       transition: background-color 0.4s;
 
       &:hover {

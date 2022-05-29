@@ -218,7 +218,7 @@ ul {
   .header__sign-in__btn {
     display: inline;
     margin-top: 0;
-    padding: 0.8rem 0.8rem;
+    padding: 0.3rem 1rem;
     font-size: 1rem;
   }
   .header__sign-in__btn:hover {
@@ -458,7 +458,6 @@ ul {
 .cta__btn {
   display: block;
   margin-inline: auto;
-  margin-top: 1.2rem;
   width: 80%;
   padding: 0.8rem 1.4rem;
   font-size: 1.3rem;
@@ -476,19 +475,16 @@ ul {
   .cta__form {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 0 1.7rem;
   }
   .cta__input {
-    display: inline;
-    width: 76%;
+    width: 87%;
+    margin-inline: unset;
   }
   .cta__btn {
     padding: 0.6rem 0.3rem;
     width: 20%;
-    display: inline-block;
-    text-align: center;
-    margin-block: auto;
     transition: background-color 0.4s;
   }
   .cta__btn:hover {
