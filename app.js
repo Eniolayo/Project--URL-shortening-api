@@ -33,15 +33,14 @@ async function shortenedURL() {
                    <div class="shortened__shorten-value">
                   <p>${dataReceived.result.full_short_link2}</p>
                   </div>
-                  <button class="shortened__btn">Copy</button>
+                  <button onclick="btnStyling()" class="shortened__btn">Copy</button>
               </div>
     </div>
   `;
   shortenedArea.prepend(shortenedBox);
 }
-const btnCopy = document.querySelector(".shortened__btn");
-
-btnCopy.addEventListener("click", () => {
+let btnCopy = document.querySelector(".shortened__btn");
+function btnStyling() {
   btnCopy.textContent = "Copied!";
   btnCopy.style.backgroundColor = "rgb(34, 34, 218)";
-});
+}
