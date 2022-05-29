@@ -281,8 +281,8 @@ ul {
     gap: 1.2rem;
   }
   .footer__social-icon {
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 2rem;
+    height: 2rem;
   }
   .footer__social-icon:hover {
     cursor: pointer;
@@ -566,7 +566,8 @@ ul {
   }
 }
 
-.short--3, .short--2 {
+.short--3,
+.short--2 {
   margin-top: 1.2rem;
 }
 
