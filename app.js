@@ -13,7 +13,6 @@ ham.addEventListener("click", () => {
 
 btnShorten.addEventListener("click", (e) => {
   e.preventDefault();
-  
   shortenedURL().catch(() => {
     errorLink.style.display = "block";
     setTimeout(() => {
