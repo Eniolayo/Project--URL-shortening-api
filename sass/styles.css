@@ -443,17 +443,17 @@ ul {
 .cta__input:-moz-placeholder-shown {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
-  color: hsl(257deg, 7%, 63%);
+  color: hsl(0deg, 87%, 67%);
 }
 .cta__input:-ms-input-placeholder {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
-  color: hsl(257deg, 7%, 63%);
+  color: hsl(0deg, 87%, 67%);
 }
 .cta__input:placeholder-shown {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
-  color: hsl(257deg, 7%, 63%);
+  color: hsl(0deg, 87%, 67%);
 }
 .cta__input:focus {
   outline: 3px solid hsl(0deg, 87%, 67%);
@@ -505,6 +505,11 @@ ul {
       -ms-user-select: none;
           user-select: none;
   overflow: hidden;
+}
+@media (max-width: 749px) {
+  .shortened {
+    max-height: 46rem;
+  }
 }
 .shortened__box {
   width: 90%;

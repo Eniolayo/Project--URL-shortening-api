@@ -115,7 +115,7 @@
     &:placeholder-shown {
       font-family: $poppins;
       font-size: 1.1rem;
-      color: $grayish-violet;
+      color: $red;
     }
 
     &:focus {
@@ -170,7 +170,9 @@
   max-height: 21rem;
   user-select: none;
   overflow: hidden;
-
+  @include respond(phone) {
+    max-height: 46rem;
+  }
   &__box {
     width: 90%;
     margin: 1rem auto;
