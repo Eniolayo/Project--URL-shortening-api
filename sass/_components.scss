@@ -101,6 +101,7 @@
       display: block;
       color: $red;
       font-weight: bold;
+      display: none;
     }
   }
   &__input {
@@ -166,13 +167,13 @@
 .shortened {
   background-color: rgba($grayish-violet, 0.2);
   padding: 2.3rem 0;
-  max-height: 27rem;
+  max-height: 21rem;
   user-select: none;
   overflow: hidden;
 
   &__box {
     width: 90%;
-    margin-inline: auto;
+    margin: 1rem auto;
     background-color: white;
     border-radius: 7px;
     padding: 1.4rem 1.7rem;
@@ -249,11 +250,6 @@
       }
     }
   }
-}
-
-.short--3,
-.short--2 {
-  margin-top: 1.2rem;
 }
 
 .details {
@@ -410,6 +406,7 @@
 
     @include respond(tab) {
       display: none;
+    }
   }
 }
 
@@ -461,5 +458,4 @@
 .attribution a {
   color: white;
   text-decoration: none;
-}
 }

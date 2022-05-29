@@ -430,6 +430,7 @@ ul {
   display: block;
   color: hsl(0deg, 87%, 67%);
   font-weight: bold;
+  display: none;
 }
 .cta__input {
   width: 100%;
@@ -498,7 +499,7 @@ ul {
 .shortened {
   background-color: rgba(158, 154, 167, 0.2);
   padding: 2.3rem 0;
-  max-height: 27rem;
+  max-height: 21rem;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -507,7 +508,7 @@ ul {
 }
 .shortened__box {
   width: 90%;
-  margin-inline: auto;
+  margin: 1rem auto;
   background-color: white;
   border-radius: 7px;
   padding: 1.4rem 1.7rem;
@@ -574,11 +575,6 @@ ul {
     cursor: pointer;
     background-color: hsl(180deg, 48%, 78%);
   }
-}
-
-.short--3,
-.short--2 {
-  margin-top: 1.2rem;
 }
 
 .details {
@@ -719,19 +715,20 @@ ul {
     display: none;
   }
 }
-.after-box .start {
+
+.start {
   background-image: url(../images/bg-boost-desktop.svg);
   background-size: cover;
   background-color: hsl(257deg, 27%, 26%);
   padding: 3.5rem 0;
 }
-.after-box .start__heading {
+.start__heading {
   font-family: "Poppins", sans-serif;
   font-size: 1.8rem;
   color: white;
   text-align: center;
 }
-.after-box .start__btn {
+.start__btn {
   display: block;
   margin-inline: auto;
   margin-top: 0.8rem;
@@ -744,23 +741,25 @@ ul {
   font-weight: 700;
   transition: background-color 0.4s;
 }
-.after-box .start__btn:hover {
+.start__btn:hover {
   cursor: pointer;
   background-color: hsl(180deg, 48%, 78%);
 }
 @media (min-width: 750px) {
-  .after-box .start {
+  .start {
     background-image: url(../images/bg-boost-desktop.svg);
   }
 }
-.after-box .attribution {
+
+.attribution {
   font-size: 1.1rem;
   text-align: center;
   background-color: hsl(260deg, 8%, 14%);
   font-family: "Poppins", sans-serif;
   color: hsl(257deg, 7%, 63%);
 }
-.after-box .attribution a {
+
+.attribution a {
   color: white;
   text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */
