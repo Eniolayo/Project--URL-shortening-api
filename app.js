@@ -26,24 +26,27 @@ async function shortenedURL() {
   );
   const dataReceived = await dataSent.json();
   const shortenedBox = document.createElement("div");
-  shortenedBox.innerHTML = ` <div class="shortened__box">
-                  <div class="shortened__input-value">
+  shortenedBox.innerHTML = `
+            <div class="shortened__box">
+                <div class="shortened__input-value">
                   <p>${inputShorten.value}</p>
-                  </div>
-                  <div class="shortened__inner-box">
-                   <div class="shortened__shorten-value">
+                </div>
+                <div class="shortened__inner-box">
+                  <div class="shortened__shorten-value">
                   <p>${dataReceived.result.full_short_link2}</p>
                   </div>
                   <button onclick="btnStyling()" class="shortened__btn">Copy</button>
-              </div>
-    </div>
+                </div>
+            </div>
   `;
   shortenedArea.prepend(shortenedBox);
   inputShorten.value = "";
-
 }
-let btnCopy = document.querySelector(".shortened__btn");
+
+let btnCopy = document.getElementsByClassName("shortened__btn");
+
 function btnStyling() {
-  btnCopy.textContent = "Copied!";
-  btnCopy.style.backgroundColor = "rgb(34, 34, 218)";
+  btnCopy = [...btnCopy];
+  // btnCopy.textContent = "Copied!";
+  // btnCopy.style.backgroundColor = "rgb(34, 34, 218)";
 }

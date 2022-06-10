@@ -6,6 +6,7 @@
   &__image-box {
     width: 90%;
     margin-inline: auto;
+    
   }
 
   &__text {
@@ -176,6 +177,7 @@
   overflow: hidden;
   @include respond(phone) {
     max-height: 46rem;
+    col
   }
   &__box {
     width: 90%;
