@@ -16,13 +16,12 @@ ham.addEventListener("click", () => {
 
 btnShorten.addEventListener("click", (e) => {
   e.preventDefault();
-  shortenedURL()
-      .catch(() => {
-      errorLink.style.display = "block";
-      setTimeout(() => {
-        errorLink.style.display = "none";
-      }, 5000);
-    });
+  shortenedURL().catch(() => {
+    errorLink.style.display = "block";
+    setTimeout(() => {
+      errorLink.style.display = "none";
+    }, 5000);
+  });
 });
 
 async function shortenedURL() {
@@ -47,9 +46,10 @@ async function shortenedURL() {
   shortenedArea.prepend(shortenedBox);
   inputShorten.value = "";
 }
-// getting the 
-let btnCopy = document.getElementsByClassName("shortened__btn");
+// getting the button dynamically added to the page
 
+let btnCopy = document.getElementsByClassName("shortened__btn");
+// Calling the function attached to the button, which loops over all the button available which copys the link on the previous div
 function buttonCopyLink(idPassed) {
   [...btnCopy].forEach((e) => {
     if (idPassed.id == e.id) {

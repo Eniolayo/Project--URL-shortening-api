@@ -135,7 +135,7 @@ ul {
 @media (max-width: 749px) {
   .header__nav {
     position: absolute;
-    top: 6%;
+    top: 12%;
     margin-inline: auto;
     left: 100%;
     width: 80%;
